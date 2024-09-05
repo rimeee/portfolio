@@ -1,0 +1,1609 @@
+$color-main: #550adf;
+$color-main-light: #8b4dff;
+$color-white: #fff;
+
+html,
+body {
+  font-size: 10px;
+  letter-spacing: -0.6px;
+  #container {
+    width: 100%;
+    #preheader {
+      width: 100%;
+      height: 4.6rem;
+      border-bottom: 0.1rem solid #e1e1e1;
+      display: flex;
+      background: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12.3rem;
+      .preheader-family {
+        width: 70rem;
+        display: flex;
+        ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 3.2rem;
+            line-height: 4.6rem;
+            position: relative;
+            &:last-child::before {
+              display: none;
+            }
+            &::before {
+              content: "";
+              display: inline-block;
+              height: 2rem;
+              width: 0.2rem;
+              background: #e1e1e1;
+              position: absolute;
+              right: -1rem;
+            }
+            a {
+              color: #555;
+              font-size: 1.2rem;
+              font-weight: 300;
+            }
+
+            .busan-lotte {
+              display: inline-block;
+              background: url(https://adventure.lotteworld.com/common/images/icon/header_busan_icon.png)
+                no-repeat center center;
+              background-size: cover;
+              width: 3rem;
+              height: 2.3rem;
+              transform: translateY(0.4rem);
+              margin-right: 0.3rem;
+            }
+            .seoulsky {
+              display: inline-block;
+              background: url(https://adventure.lotteworld.com/common/images/icon/header_sky_icon.png)
+                no-repeat center center;
+              background-size: cover;
+              width: 1.9rem;
+              height: 2.5rem;
+              transform: translateY(0.5rem);
+              margin-right: 0.3rem;
+            }
+            .aquarium {
+              display: inline-block;
+              background: url(https://adventure.lotteworld.com/common/images/icon/header_aqua_icon.png)
+                no-repeat center center;
+              background-size: cover;
+              width: 2.5rem;
+              height: 2.8rem;
+              transform: translateY(1rem);
+              margin-right: 0.3rem;
+            }
+            .waterpark {
+              display: inline-block;
+              background: url(https://adventure.lotteworld.com/common/images/icon/header_water_icon.png)
+                no-repeat center center;
+              background-size: cover;
+              width: 2.4rem;
+              height: 2.4rem;
+              transform: translateY(0.8rem);
+              margin-right: 0.3rem;
+            }
+          }
+        }
+      }
+      .preheader-right {
+        width: 40rem;
+        display: flex;
+        justify-content: space-between;
+        .preheader-right-more {
+          width: 18rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          float: left;
+          position: relative;
+          &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 0.2rem;
+            height: 1.5rem;
+            background: #e1e1e1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          li {
+            padding: 0.8rem 0 0.6rem;
+            font-size: 1.3rem;
+
+            a {
+              color: #555;
+              font-size: 1.3rem;
+              padding-right: 0.9rem;
+            }
+          }
+        }
+        .preheader-right-login {
+          width: 20rem;
+          margin-left: 2rem;
+          display: flex;
+          justify-content: space-between;
+          li {
+            padding: 0.8rem 0 0.6rem;
+            font-size: 1.5rem;
+            color: #555;
+            font-weight: bold;
+            position: relative;
+            &:nth-child(2)::before {
+              content: "";
+              display: inline-block;
+              width: 0.2rem;
+              height: 1.5rem;
+              background: #e1e1e1;
+              position: absolute;
+              left: -2rem;
+            }
+            &:last-child {
+              left: -2rem;
+              position: relative;
+              &::before {
+                content: "\f0d7";
+                font-family: "fontawesome";
+                display: inline-block;
+                position: absolute;
+                right: -2rem;
+              }
+            }
+            a {
+              color: #555;
+              font-weight: bold;
+              font-size: 1.5rem;
+              padding-right: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+    //============= section : mainheader ===============
+    #mainheader {
+      width: 100vw;
+      height: 9.9rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 12.3rem;
+      background: $color-white;
+      z-index: 9999;
+      .mainheader-togglebtn {
+        cursor: pointer;
+        width: 4.5rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        left: 5rem;
+        display: none;
+        span {
+          display: block;
+          width: 100%;
+          height: 0.3rem;
+          background: $color-main;
+        }
+      }
+      .mainheader-logo {
+        cursor: pointer;
+        display: block;
+        background: url(https://adventure.lotteworld.com/common/images/logo.png)
+          no-repeat center center;
+        width: 10.7rem;
+        height: 100%;
+      }
+      .mainheader-findglass {
+        display: none;
+        background: url(./contents/mainheader-icons/header_srch_btn.png);
+        width: 4rem;
+        height: 4rem;
+        background-size: cover;
+        position: absolute;
+        right: 5rem;
+      }
+      .mainheader-gnb {
+        display: flex;
+        align-items: center;
+        width: 75rem;
+        li {
+          width: 100%;
+          line-height: 9.9rem;
+          position: relative;
+          text-align: center;
+          a {
+            font-size: 1.8rem;
+            color: #000;
+            font-weight: 600;
+          }
+          &::before {
+            content: "";
+            background: url(./contents/mainheader-icons/mainheader-angle.png)
+              no-repeat center center;
+            width: 1.7rem;
+            height: 1rem;
+            background-size: cover;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+          }
+          &.active::before {
+            opacity: 1;
+          }
+        }
+      }
+      .mainheader-navmore {
+        display: flex;
+        width: 32rem;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          span {
+            color: $color-main;
+            font-size: 1.6rem;
+            padding-top: 1.1rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+    #mo-slidernav {
+      .monav-header-closebtn {
+        cursor: pointer;
+      }
+      display: none;
+    }
+    // ============floating=============
+    #float {
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      position: fixed;
+      right: 2rem;
+      cursor: pointer;
+      bottom: 4rem;
+      right: 2rem;
+
+      .float-quickimg {
+        margin-right: 3.5rem;
+      }
+      .float-quick {
+        width: 7rem;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        right: 3.4rem;
+        bottom: 0;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        &:hover span {
+          animation: float-quick 0.5s linear;
+        }
+        span {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: $color-white;
+        }
+      }
+    }
+    // =============section : slide nav ============
+    #slidernav {
+      z-index: 9999;
+      width: 100%;
+      height: 0; //33.6rem
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 12.3rem; //12.3rem
+      position: fixed;
+      background: #fff;
+      transition: 0.5s;
+      justify-content: space-between;
+      &.active {
+        height: 33.6rem;
+        padding: 12.3rem;
+        padding-right: 14.2rem;
+        border-top: 0.2rem solid $color-main;
+      }
+      .slidernav-bgimg {
+        position: absolute;
+        right: 14rem;
+        bottom: 0;
+        background-size: cover;
+        height: 33.4rem;
+        width: auto;
+        z-index: 9;
+      }
+      .slidernav-businesstimebox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        width: auto;
+        height: 25rem;
+        border-right: 1px solid #e1e1e1;
+        padding-right: 5%;
+        transition: 0.3s;
+        .slidernav-clockimg {
+          background: url(https://adventure.lotteworld.com/common/images/icon/gnb_timeInfo_bg.png)
+            no-repeat center center;
+          width: 5rem;
+          height: 5rem;
+        }
+        .slidernav-timedesc {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-size: 1.6rem;
+            color: #888;
+            line-height: 5rem;
+          }
+          span {
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 3rem;
+            b {
+              color: #000;
+              font-size: 2rem;
+              font-weight: bold;
+            }
+          }
+          time {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+      }
+      .slidernav-mainbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        height: auto;
+        width: 81.3rem;
+        z-index: 10;
+        padding: 0 5rem;
+        margin-left: -10rem;
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 0.8rem;
+          color: #ccc;
+
+          li {
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding: 1.5rem 0;
+            width: 14rem;
+            border-bottom: 1px solid #e1e1e1;
+            position: relative;
+            transition: 0.3s;
+            &:hover a {
+              color: $color-main;
+            }
+            a {
+              font-size: 1.8rem;
+            }
+            &.over {
+              color: #000;
+              font-weight: 500;
+            }
+
+            &::before {
+              font-family: "fontawesome";
+              content: "\f105";
+              position: absolute;
+              right: 0.3rem;
+              font-size: 1.3rem;
+              line-height: 1.8rem;
+              opacity: 0;
+            }
+            &.over.active {
+              color: $color-main;
+              font-weight: 600;
+              border-bottom: 1.3px solid $color-main;
+              transition: 0.3s;
+              &::before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      .slidernav-appad {
+        z-index: 10;
+        position: relative;
+        top: 0;
+        width: 27rem;
+        height: 33.8rem;
+        h1 {
+          cursor: pointer;
+          font-size: 2.2rem;
+          font-weight: 550;
+          line-height: 3rem;
+          color: #fff;
+          padding: 3rem 0 0 3rem;
+          b {
+            font-weight: 600;
+            color: #ffc600;
+            font-size: 2.2rem;
+          }
+        }
+        ul {
+          padding: 1.5rem;
+          color: #fff;
+          list-style: square;
+          margin-left: 3rem;
+          li {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+            list-style: inherit;
+          }
+        }
+        strong {
+          background: url(https://adventure.lotteworld.com/common/images/icon/gnb_appDown_icon.png)
+            no-repeat center center;
+          width: 4rem;
+          height: 1.2rem;
+          display: block;
+          margin-left: 3rem;
+          padding-top: 3rem;
+          transition: 0.5s;
+          &:hover {
+            cursor: pointer;
+            transform: translateX(1.5rem);
+          }
+        }
+        img {
+          cursor: pointer;
+          width: 27rem;
+          height: 33.8rem;
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+      }
+    }
+    #main-footer {
+      border-top: 0.1rem solid #d9d9d9;
+      width: 100%;
+      height: 38.3rem;
+      padding: 5rem 12rem 16rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .footer-top {
+        ul {
+          letter-spacing: -0.06rem;
+          border-bottom: 0.1rem solid #d9d9d9;
+          padding-bottom: 3rem;
+          color: #333;
+          width: 117rem;
+          display: flex;
+          justify-content: space-between;
+          font-weight: 300;
+          li {
+            font-size: 1.5rem;
+            &.red {
+              color: #e10000;
+            }
+          }
+        }
+      }
+      .footer-bottom {
+        margin-top: 3rem;
+        display: flex;
+        width: 117rem;
+        justify-content: space-between;
+        .footer-bottom-logo {
+          background: url("https://adventure.lotteworld.com/common/images/icon/footer_logo.png")
+            no-repeat center center;
+          width: 7.9rem;
+          height: 5.6rem;
+          margin-right: 5rem;
+        }
+        .footer-bottom-info {
+          .footer-bottom-info-up {
+            &:first-child {
+              span {
+                &:nth-child(2)::before {
+                  display: none;
+                }
+              }
+            }
+            span {
+              padding-left: 1.1rem;
+              margin-left: 1.1rem;
+              line-height: 2.5rem;
+              color: #555;
+              font-weight: 300;
+              font-size: 1.3rem;
+              letter-spacing: -0.06rem;
+              display: inline-block;
+              position: relative;
+              &:nth-child(3)::before {
+                display: none;
+              }
+              &::before {
+                content: "";
+                display: inline-block;
+                height: 1.5rem;
+                width: 0.1rem;
+                background: #e0e0e0;
+                position: absolute;
+                right: -1.2rem;
+                bottom: 0.5rem;
+              }
+              &.footer-copyright {
+                display: block;
+                font-size: 1.3rem;
+                color: #777;
+                margin-top: 3rem;
+                &::before {
+                  display: none;
+                }
+              }
+            }
+          }
+          .footer-bottom-info-down {
+            padding: 1.1rem;
+            margin-left: 1.1rem;
+            display: flex;
+            margin-top: 1.5rem;
+            .footer-bottom-info-down-left {
+              width: 27rem;
+              margin-right: 2.5rem;
+              .footer-down-left-logo {
+                width: 4rem;
+                height: 4rem;
+                img {
+                  object-fit: cover;
+                }
+                float: left;
+                margin-right: 1rem;
+              }
+              div {
+                font-size: 1.1rem;
+                font-weight: 300;
+                color: #333;
+                line-height: 1.5rem;
+                b {
+                  font-size: 1.1rem;
+                  font-weight: 300;
+                  color: #333;
+                  line-height: 1.5rem;
+                  margin-left: 1.5rem;
+                }
+              }
+            }
+            .footer-bottom-info-down-right {
+              .footer-down-right-logo {
+                width: 5.3rem;
+                height: 3.9rem;
+                float: left;
+                margin-right: 1rem;
+                img {
+                  width: 5.3rem;
+                  height: 3.9rem;
+                  object-fit: cover;
+                }
+              }
+              span {
+                color: #333;
+                font-size: 1.1rem;
+                line-height: 3.9rem;
+              }
+            }
+          }
+        }
+        .footer-bottom-right {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          align-items: end;
+          .footer-bottom-rightup {
+            display: flex;
+            gap: 3rem;
+            .footer-bottom-right-icons {
+              display: flex;
+              gap: 1rem;
+              .footer-bottom-right-icon {
+                width: 3.5rem;
+                height: 3.5rem;
+                .footer-bottom-right-icon01 {
+                  width: 100%;
+                  height: 100%;
+                  background-size: cover;
+                }
+                .footer-bottom-right-icon02 {
+                  width: 100%;
+                  height: 100%;
+                  background-size: cover;
+                }
+                .footer-bottom-right-icon03 {
+                  width: 100%;
+                  height: 100%;
+                  background-size: cover;
+                }
+              }
+            }
+            form {
+              select {
+                padding: 1.2rem 5rem 1.2rem 2rem;
+                border: 1px solid #e0e0e0;
+                color: #555;
+                font-size: 1.3rem;
+                letter-spacing: -0.06rem;
+                display: inline-block;
+                background: url("https://adventure.lotteworld.com/common/images/icon/sel_icon.png")
+                  no-repeat right 1.7rem top 50%;
+                appearance: none;
+              }
+            }
+          }
+          .footer-bottom-right-banner {
+            background: url("https://adventure.lotteworld.com/common/images/img_lotthotel_pc.jpg")
+              no-repeat center center;
+            width: 100%;
+            height: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1475px) {
+  html,
+  body {
+    #container {
+      #slidernav {
+        .slidernav-businesstimebox {
+          display: none;
+        }
+        .slidernav-mainbox {
+          width: 70rem;
+        }
+      }
+      #float {
+        .float-quick {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  html,
+  body {
+    font-size: 9.5px;
+    #container {
+      #preheader {
+        height: auto;
+        flex-direction: column;
+        align-items: normal;
+        .preheader-family {
+          padding: 0.5rem;
+        }
+        .preheader-right {
+          padding: 0.5rem;
+        }
+      }
+      #mainheader {
+        .mainheader-logo {
+          width: 12rem;
+          height: 100%;
+        }
+      }
+      #slidernav {
+        padding: 0;
+        .slidernav-businesstimebox {
+          display: none;
+        }
+      }
+      #float {
+        .float-quick {
+          width: 7.5rem;
+          height: 7.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  html,
+  body {
+    #container {
+      #mainheader {
+        .mainheader-logo {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 8px;
+    #container {
+      #preheader {
+        display: none;
+      }
+      #mainheader {
+        height: 6.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .mainheader-togglebtn {
+          display: flex;
+          width: 5rem;
+          height: 3.5rem;
+        }
+        .mainheader-logo {
+          width: 7.5rem;
+          height: 5rem;
+          background-size: cover;
+          display: block;
+        }
+        .mainheader-findglass {
+          display: block;
+          width: 5rem;
+          height: 5.3rem;
+        }
+        .mainheader-gnb {
+          display: none;
+        }
+        .mainheader-navmore {
+          display: none;
+        }
+      }
+      #mo-slidernav {
+        z-index: 10;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: $color-white;
+        margin-left: -500rem;
+        transition: 1s;
+        &.active {
+          margin-left: 0;
+        }
+        .monav-header {
+          height: 32rem;
+          display: flex;
+          flex-direction: column;
+          .monav-header-top {
+            background: $color-main;
+            height: 10rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem;
+            background: $color-main-light;
+            color: $color-white;
+            span {
+              font-size: 2.8rem;
+            }
+            .monav-header-top-login {
+              a {
+                color: $color-white;
+                font-size: 3rem;
+                span {
+                  margin-left: 1rem;
+                }
+              }
+            }
+            .monav-header-top-lang {
+              display: flex;
+              gap: 4rem;
+              i {
+                margin-left: 2rem;
+                font-size: 2.5rem;
+                transform: translateY(-20%);
+              }
+              .monav-header-closebtn {
+                transform: translateY(30%);
+                span {
+                  display: block;
+                  width: 3.5rem;
+                  height: 0.2rem;
+                  background: #fff;
+                  &:first-child {
+                    transform: translateY(50%) rotate(45deg);
+                  }
+                  &:last-child {
+                    transform: translateY(-50%) rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+          .monav-header-center {
+            height: 9.6rem;
+            background: #3b079c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 17rem;
+            span {
+              color: $color-white;
+              font-size: 2.5rem;
+              position: relative;
+              &:first-child::before {
+                display: none;
+              }
+              &::before {
+                content: "";
+                display: inline-block;
+                width: 0.04rem;
+                height: 3rem;
+                background: rgba(255, 255, 255, 0.4);
+                position: absolute;
+                left: -3rem;
+              }
+            }
+          }
+          .monav-header-bottom {
+            height: 12.4rem;
+            background: $color-main-light;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            img {
+              width: 5rem;
+              height: 3rem;
+            }
+            span {
+              color: $color-white;
+              font-size: 2.8rem;
+              font-weight: 700;
+            }
+          }
+        }
+        .monav-more {
+          height: 14rem;
+          display: flex;
+          .monav-more-museum {
+            width: 50%;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-right: 1px solid #e1e1e1;
+            img {
+              width: 23.2rem;
+              height: 13.9rem;
+              object-fit: cover;
+            }
+          }
+          .monav-more-icelink {
+            width: 50%;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            img {
+              width: 19rem;
+              height: 13.9rem;
+              object-fit: cover;
+            }
+          }
+        }
+        .monav-gnbbox {
+          .monav-gnb-li {
+            height: 11.6rem;
+            border-top: 1px solid #e1e1e1;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            transition: 0.5s;
+            &.active {
+              background: #f2f2f2;
+              border-bottom: 0.04rem solid #e1e1e1;
+              .monav-gnb {
+                font-weight: bolder;
+                color: $color-main;
+              }
+              .monav-gnbmore {
+                span {
+                  background: $color-main;
+                  &:last-child {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .monav-gnb {
+              font-size: 3.2rem;
+              letter-spacing: -0.3rem;
+              font-weight: 400;
+            }
+            .monav-gnbmore {
+              span {
+                display: block;
+                width: 3rem;
+                height: 0.06rem;
+                background: #000;
+                &:last-child {
+                  transform: rotate(90deg);
+                }
+              }
+            }
+          }
+          .monav-lnb {
+            height: 0;
+            overflow: hidden;
+            background: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.5s;
+            &.active {
+              height: auto;
+            }
+            li {
+              font-size: 3.2rem;
+              color: #888;
+              width: 90%;
+              padding: 3rem;
+              padding-left: 7rem;
+              border-bottom: 0.04rem solid #dadada;
+              &.clone {
+                color: #000;
+                font-weight: bold;
+                a {
+                  font-size: 3.2rem;
+                }
+              }
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        }
+        .monav-ad {
+          display: flex;
+          width: 100%;
+          border-top: 2rem solid #f2f2f2;
+          border-bottom: 2rem solid #f2f2f2;
+          .monav-ad-appdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 19.6rem;
+            border-right: 0.4rem solid #e1e1e1;
+            img {
+              width: 7rem;
+              height: 10rem;
+            }
+            span {
+              font-size: 3.2rem;
+              letter-spacing: -0.12rem;
+              color: #555;
+            }
+          }
+          .monav-ad-mall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 19.6rem;
+            img {
+              width: 7rem;
+              height: 10rem;
+            }
+            span {
+              font-size: 3.2rem;
+              letter-spacing: -0.12rem;
+              color: #555;
+            }
+          }
+        }
+        .monav-family {
+          height: 50rem;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 7rem 5rem;
+          a {
+            position: relative;
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 0.02rem;
+              height: 5rem;
+              background: #e1e1e1;
+              position: absolute;
+              right: -8rem;
+              top: 20%;
+            }
+          }
+          .monav-family-lottebusan {
+            width: 32%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+          .monav-family-seoulsky {
+            width: 33%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+          .monav-family-aquarium {
+            width: 32%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              &::before {
+                display: none;
+              }
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+          .monav-family-lottewaterpark {
+            width: 32%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+        }
+      }
+      #adslide {
+        width: 100vw;
+        .adslide-pager {
+          display: none;
+        }
+        .pagerbtn {
+          display: none;
+        }
+      }
+      #slidernav {
+        display: none;
+      }
+      #float {
+        .float-quick {
+          width: 8.8rem;
+          height: 8.8rem;
+        }
+      }
+      #main-footer {
+        .footer-top {
+          width: 100vw;
+          ul {
+            width: inherit;
+            padding: 5rem;
+          }
+        }
+        .footer-bottom {
+          width: 100rem;
+          .footer-bottom-logo {
+            width: 11rem;
+            height: 9rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  html,
+  body {
+    font-size: 5px;
+    letter-spacing: -0.6px;
+    #container {
+      width: 100%;
+      #mainheader {
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .mainheader-togglebtn {
+          display: flex;
+        }
+        .mainheader-logo {
+          width: 12rem;
+          height: 8rem;
+          background-size: cover;
+        }
+        .mainheader-gnb {
+          display: none;
+        }
+        .mainheader-navmore {
+          display: none;
+        }
+      }
+      #mo-slidernav {
+        z-index: 10;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: $color-white;
+        margin-left: -500rem;
+        transition: 1s;
+        &.active {
+          margin-left: 0;
+          transition: 1s;
+        }
+        .monav-header {
+          height: 32rem;
+          display: flex;
+          flex-direction: column;
+          .monav-header-top {
+            background: $color-main;
+            height: 10rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem;
+            background: $color-main-light;
+            color: $color-white;
+            span {
+              font-size: 2.8rem;
+            }
+            .monav-header-top-login {
+              a {
+                color: $color-white;
+                font-size: 3rem;
+                span {
+                  margin-left: 1rem;
+                }
+              }
+            }
+            .monav-header-top-lang {
+              display: flex;
+              gap: 4rem;
+              i {
+                margin-left: 2rem;
+                font-size: 2.5rem;
+                transform: translateY(-20%);
+              }
+              .monav-header-closebtn {
+                transform: translateY(30%);
+                cursor: pointer;
+                span {
+                  display: block;
+                  width: 3.5rem;
+                  height: 0.2rem;
+                  background: #fff;
+                  &:first-child {
+                    transform: translateY(50%) rotate(45deg);
+                  }
+                  &:last-child {
+                    transform: translateY(-50%) rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+          .monav-header-center {
+            height: 9.6rem;
+            background: #3b079c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 17rem;
+            span {
+              color: $color-white;
+              font-size: 2.5rem;
+              position: relative;
+              &:first-child::before {
+                display: none;
+              }
+              // &::before {
+              //   content: "";
+              //   display: inline-block;
+              //   width: 0.04rem;
+              //   height: 3rem;
+              //   background: rgba(255, 255, 255, 0.4);
+              //   position: absolute;
+              //   left: -3rem;
+              // }
+            }
+          }
+          .monav-header-bottom {
+            height: 12.4rem;
+            background: $color-main-light;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            img {
+              width: 5rem;
+              height: 3rem;
+            }
+            span {
+              color: $color-white;
+              font-size: 2.8rem;
+              font-weight: 700;
+            }
+          }
+        }
+        .monav-more {
+          height: 14rem;
+          display: flex;
+          .monav-more-museum {
+            width: 50%;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-right: 1px solid #e1e1e1;
+            img {
+              width: 23.2rem;
+              height: 13.9rem;
+              object-fit: cover;
+            }
+          }
+          .monav-more-icelink {
+            width: 50%;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            img {
+              width: 19rem;
+              height: 13.9rem;
+              object-fit: cover;
+            }
+          }
+        }
+        .monav-gnbbox {
+          .monav-gnb-li {
+            height: 11.6rem;
+            border-top: 1px solid #e1e1e1;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            transition: 0.5s;
+            &.active {
+              background: #f2f2f2;
+              border-bottom: 0.04rem solid #e1e1e1;
+              .monav-gnb {
+                font-weight: bolder;
+                color: $color-main;
+              }
+              .monav-gnbmore {
+                span {
+                  background: $color-main;
+                  &:last-child {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .monav-gnb {
+              font-size: 3.2rem;
+              letter-spacing: -0.3rem;
+              font-weight: 400;
+            }
+            .monav-gnbmore {
+              span {
+                display: block;
+                width: 3rem;
+                height: 0.06rem;
+                background: #000;
+                &:last-child {
+                  transform: rotate(90deg);
+                }
+              }
+            }
+          }
+          .monav-lnb {
+            height: 0;
+            overflow: hidden;
+            background: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &.active {
+              height: auto;
+            }
+            li {
+              font-size: 3.2rem;
+              color: #888;
+              width: 90%;
+              padding: 3rem;
+              padding-left: 7rem;
+              border-bottom: 0.04rem solid #dadada;
+              &.clone {
+                color: #000;
+                font-weight: bold;
+              }
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        }
+        .monav-ad {
+          display: flex;
+          width: 100%;
+          border-top: 2rem solid #f2f2f2;
+          border-bottom: 2rem solid #f2f2f2;
+          .monav-ad-appdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 19.6rem;
+            border-right: 0.4rem solid #e1e1e1;
+            img {
+              width: 7rem;
+              height: 10rem;
+            }
+            span {
+              font-size: 3.2rem;
+              letter-spacing: -0.12rem;
+              color: #555;
+            }
+          }
+          .monav-ad-mall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 19.6rem;
+            img {
+              width: 7rem;
+              height: 10rem;
+            }
+            span {
+              font-size: 3.2rem;
+              letter-spacing: -0.12rem;
+              color: #555;
+            }
+          }
+        }
+        .monav-family {
+          height: 50rem;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 7rem 5rem;
+          a {
+            position: relative;
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 0.02rem;
+              height: 5rem;
+              background: #e1e1e1;
+              position: absolute;
+              right: -8rem;
+              top: 20%;
+            }
+          }
+          .monav-family-lottebusan {
+            width: 32%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+          .monav-family-seoulsky {
+            width: 33%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+          .monav-family-aquarium {
+            width: 32%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              &::before {
+                display: none;
+              }
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+          .monav-family-lottewaterpark {
+            width: 32%;
+            height: 19rem;
+            display: flex;
+            justify-content: center;
+            a {
+              img {
+                width: 13rem;
+                height: 12rem;
+              }
+            }
+          }
+        }
+      }
+      #preheader {
+        display: none;
+      }
+      #slidernav {
+        display: none;
+      }
+
+      #float {
+        .float-chatbot {
+          width: 32rem;
+          height: 20rem;
+        }
+        .float-quickimg {
+          width: 12rem;
+          height: 12rem;
+        }
+        .float-quick {
+          width: 12rem;
+          height: 12rem;
+          span {
+            font-size: 2.5rem;
+          }
+        }
+      }
+      #main-footer {
+        padding: 5rem 5% 28rem;
+        .footer-top {
+          ul {
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            li {
+              font-size: 2.5rem;
+              line-height: 5rem;
+            }
+          }
+        }
+        .footer-bottom {
+          width: 100%;
+          flex-wrap: wrap;
+          .footer-bottom-logo {
+            width: 14rem;
+            height: 10rem;
+            background-size: cover;
+            margin-bottom: 2rem;
+          }
+
+          .footer-bottom-info {
+            width: 250rem;
+            .footer-bottom-info-up {
+              span {
+                font-size: 2.5rem;
+                line-height: 5rem;
+                &.footer-copyright {
+                  font-size: 2.5rem;
+                }
+              }
+            }
+            .footer-bottom-info-down-left {
+              .footer-down-left-logo {
+                height: 4rem;
+                width: 4rem;
+                img {
+                  width: 4rem;
+                  height: 4rem;
+                  object-fit: cover;
+                }
+              }
+              div {
+                font-size: 2.5rem;
+                b {
+                  font-size: 2.5rem;
+                }
+              }
+              .footer-down-right-logo {
+                border: 1px solid #000;
+                width: 4rem;
+                height: 4rem;
+
+                img {
+                  width: 4rem;
+                  height: 4rem;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+        .footer-bottom-right {
+          padding: 2rem;
+          flex-direction: row;
+          width: 100%;
+          .footer-bottom-rightup {
+            .footer-bottom-right-icons {
+              .footer-bottom-right-icon {
+                img {
+                  background-size: cover;
+                }
+              }
+            }
+          }
+          .footer-bottom-right-banner {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
