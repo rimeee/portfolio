@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jukebox</title>
+    <link rel="stylesheet" href="./jukebox.css" />
+    <script
+      src="https://kit.fontawesome.com/f7f6a880c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper_header">
+        <div class="wrapper_title">
+          <div class="title">오늘의 BGM</div>
+          <div class="subtitle">TODAY CHOICE</div>
+        </div>
+        <div class="divideLine"></div>
+        <div class="albumWrapper">
+          <div class="albumWrapper_item">
+            <img
+              class="album_thumnail"
+              src="https://image.bugsm.co.kr/album/images/500/40780/4078016.jpg"
+              alt="jb01"
+            />
+            <div class="album_songtitle">NewJeans</div>
+            <div class="album_artist">Hype Boy</div>
+          </div>
+          <div class="albumWrapper_item">
+            <img
+              class="album_thumnail"
+              src="https://cdnimg.melon.co.kr/cm2/album/images/112/81/456/11281456_20230706180841_500.jpg/melon/resize/260/quality/80/optimize"
+              alt="jb03"
+            />
+            <div class="album_songtitle">NewJeans</div>
+            <div class="album_artist">ETA</div>
+          </div>
+          <div class="albumWrapper_item">
+            <img
+              class="album_thumnail"
+              src="https://cdnimg.melon.co.kr/cm2/album/images/111/27/145/11127145_20230102135733_500.jpg?c8aadf63675571818c6520070525c9ac/melon/resize/260/quality/80/optimize"
+              alt="jb02"
+            />
+            <div class="album_songtitle">NewJeans</div>
+            <div class="album_artist">OMG</div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper_body">
+        <div class="header_title">
+          <div class="title">한 주의 BGM</div>
+          <div class="title">WEEK CHOICE</div>
+        </div>
+        <table class="albumTable">
+          <tr>
+            <th class="albumTable_checkbox"><input type="checkbox" /></th>
+            <th class="albumTable_number">번호</th>
+            <th class="albumTable_song">곡명</th>
+            <th class="albumTable_artist">아티스트</th>
+          </tr>
+          <tr>
+            <td class="albumTable_checkbox"><input type="checkbox" /></td>
+            <td class="albumTable_number">1</td>
+            <td class="albumTable_song">
+              <i class="fas fa-caret-right"></i>
+              <i class="fas fa-pause"></i>
+              <span>Cool With You</span>
+            </td>
+            <td class="albumTable_artist">NewJeans</td>
+          </tr>
+          <tr>
+            <td class="albumTable_checkbox"><input type="checkbox" /></td>
+            <td class="albumTable_number">2</td>
+            <td class="albumTable_song">
+              <i class="fas fa-caret-right"></i>
+              <i class="fas fa-pause"></i>
+              <span>Ditto</span>
+            </td>
+            <td class="albumTable_artist">NewJeans</td>
+          </tr>
+          <tr>
+            <td class="albumTable_checkbox"><input type="checkbox" /></td>
+            <td class="albumTable_number">3</td>
+            <td class="albumTable_song">
+              <i class="fas fa-caret-right"></i>
+              <i class="fas fa-pause"></i>
+              <span>Get A Guitar</span>
+            </td>
+            <td class="albumTable_artist">RIIZE</td>
+          </tr>
+          <tr>
+            <td class="albumTable_checkbox"><input type="checkbox" /></td>
+            <td class="albumTable_number">4</td>
+            <td class="albumTable_song">
+              <i class="fas fa-caret-right"></i>
+              <i class="fas fa-pause"></i>
+              <span>Drama</span>
+            </td>
+            <td class="albumTable_artist">aespa (에스파)</td>
+          </tr>
+          <tr>
+            <td class="albumTable_checkbox"><input type="checkbox" /></td>
+            <td class="albumTable_number">5</td>
+            <td class="albumTable_song">
+              <i class="fas fa-caret-right"></i>
+              <i class="fas fa-pause"></i>
+              <span>Baddie</span>
+            </td>
+            <td class="albumTable_artist">IVE (아이브)</td>
+          </tr>
+        </table>
+        <div class="albumTable_footer">
+          <div class="albumTable_footer_left">
+            <button>듣기</button>
+          </div>
+          <div class="albumTable_footer_center">| <span>1</span> |</div>
+          <div class="albumTable_footer_right">
+            <button>이동</button>
+            <button>배경음악 등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
